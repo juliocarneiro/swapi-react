@@ -23,7 +23,15 @@ class App extends Component {
   render() {
     const renderItems = this.state.items.map(function(item, i) {
       return(
-        <li key={i}><span>Name:</span> {item.name} / <span>Gender:</span> {item.gender} / <span>Birth year:</span> {item.birth_year} / <span>Height:</span> {item.height}</li>
+        <div key={i} className="list">
+          <h1>{item.name}</h1>
+          <p><span>Gender:</span> {item.gender}</p>
+          <p><span>Birth year:</span> {item.birth_year}</p>
+          <p><span>Height:</span> {item.height}</p>
+          <p><span>Eye Color:</span> {item.eye_color}</p>
+          <p><span>Hair Color:</span> {item.hair_color}</p>
+          <p><span>Skin Color:</span> {item.skin_color}</p>
+        </div>
       )
     });
 
